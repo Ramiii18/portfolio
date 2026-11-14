@@ -340,18 +340,6 @@ const en: Content = {
         stack: ['Python', 'Jupyter', 'PyTorch / CUDA'],
       },
       {
-        id: 'install-assistant',
-        title: 'Installation Knowledge Assistant',
-        pitch: 'Document-grounded Q&A assistant for robot installation procedures.',
-        problem:
-          'Installation procedures are long and differ by robot variant. On site, an answer that sounds right but is not in the procedure costs time.',
-        approach:
-          'Answers are grounded in the installation documents, with a strict split between what is documented and what is inferred.',
-        result:
-          'Every answer separates documented statements from flagged inferences, so the reader knows what to verify.',
-        stack: ['Document-grounded Q&A', 'Installation procedures', 'AMR / forklift variants'],
-      },
-      {
         id: 'pfe-milp',
         title: 'Multi-Robot Coordination: MILP and Metaheuristic',
         context: 'Graduation project · ISITEC · 2024',
@@ -755,19 +743,6 @@ const fr: Content = {
         result:
           'Problèmes critiques documentés : chemins codés en dur, bug de copie superficielle, erreur de cohérence des identifiants, prérequis GPU non documentés et écarts entre la documentation et le code.',
         stack: ['Python', 'Jupyter', 'PyTorch / CUDA'],
-      },
-      {
-        id: 'install-assistant',
-        title: "Assistant de connaissance pour l'installation",
-        pitch:
-          "Assistant de questions-réponses fondé sur les documents des procédures d'installation des robots.",
-        problem:
-          "Les procédures d'installation sont longues et varient selon le type de robot. Sur site, une réponse plausible mais absente de la procédure fait perdre du temps.",
-        approach:
-          "Les réponses s'appuient sur les documents d'installation, avec une séparation stricte entre ce qui est documenté et ce qui est déduit.",
-        result:
-          'Chaque réponse distingue les éléments documentés des déductions signalées : le lecteur sait ce qu\'il doit vérifier.',
-        stack: ['Q&R sur documents', "Procédures d'installation", 'Variantes AMR / chariot'],
       },
       {
         id: 'pfe-milp',
