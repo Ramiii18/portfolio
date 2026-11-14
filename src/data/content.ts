@@ -246,9 +246,9 @@ const en: Content = {
   },
   about: {
     paragraphs: [
-      'I am an Optimization Engineer at ISITEC (Tunis / Lyon). I write the Python algorithms that decide which robot takes which task, which route it follows, how traffic keeps flowing and when each robot goes to charge.',
-      "Those algorithms are integrated into ISITEC's C#/.NET Fleet Management System and R&D-tested with clients. I also work on site: I have led AMR deployments for major industrial groups across Europe, including a flagship site running a **25-AMR fleet**, and AGV deployments for clients in North Africa.",
-      'I trained as an industrial engineer at ENIT (Bac+5, master\'s level, 2024), with a focus on operations research and supply chain. I work in French and English with international customers.',
+      'Industrial engineer specialized in **optimization and operations research**, applied to fleets of autonomous mobile robots (AMR/AGV). My core strength is turning an operational problem into a mathematical model, then into an algorithm that holds up in production.',
+      'Strong in **Python**, heuristics and metaheuristics, MILP modeling, scheduling and simulation, with solid machine learning foundations and hands-on experience integrating algorithms into a **C#/.NET** Fleet Management System. Equally at ease in the field: on-site commissioning, stakeholder coordination and operator training on international projects, up to a flagship site running a **25-AMR fleet**.',
+      'Rigorous, autonomous and clear with both technical and non-technical audiences. Fluent in French and English (C1), native Arabic speaker. ENIT graduate (Bac+5, master\'s level, 2024).',
     ],
   },
   experience: {
@@ -325,18 +325,6 @@ const en: Content = {
         note: 'The playground below runs a small-scale version of the assignment problem in your browser.',
         stack: ['Python', 'Operations research', 'Heuristics', 'C#/.NET integration'],
         featured: true,
-      },
-      {
-        id: 'local-rag',
-        title: 'Local RAG Document Assistant',
-        pitch: 'A fully local, zero-cost chatbot over PDF, Word and PowerPoint files, with OCR.',
-        problem:
-          'Technical documents are spread across formats, and sending them to a cloud API is neither free nor always acceptable.',
-        approach:
-          'Hybrid retrieval (BM25 + vector search) with a reranker, multilingual embeddings (BAAI/bge-m3) stored in ChromaDB, and a local LLM served by Ollama (qwen3:8b). OCR for scanned pages and persistent chat history.',
-        result:
-          'Runs entirely on a local machine, at no cost per query. Rebuilt and improved across four versions (v1 → v4).',
-        stack: ['Python', 'ChromaDB', 'Ollama', 'BAAI/bge-m3', 'BM25', 'Reranker', 'OCR'],
       },
       {
         id: 'ml-audit',
@@ -444,7 +432,6 @@ const en: Content = {
           'TensorFlow / Keras',
           'Data mining',
           'Forecasting',
-          'RAG: hybrid search, embeddings, reranking',
         ],
       },
       {
@@ -487,8 +474,8 @@ const en: Content = {
     languagesTitle: 'Languages',
     languages: [
       { name: 'Arabic', level: 'Native' },
-      { name: 'French', level: 'B2 · DELF' },
-      { name: 'English', level: 'B2 · TOEIC' },
+      { name: 'French', level: 'C1' },
+      { name: 'English', level: 'C1' },
       { name: 'Spanish', level: 'Beginner' },
     ],
   },
@@ -676,9 +663,9 @@ const fr: Content = {
   },
   about: {
     paragraphs: [
-      "Je suis ingénieur optimisation chez ISITEC (Tunis / Lyon). J'écris les algorithmes Python qui décident quel robot prend quelle tâche, par quel chemin, comment le trafic reste fluide et à quel moment chaque robot part se recharger.",
-      "Ces algorithmes sont intégrés au Fleet Management System C#/.NET d'ISITEC et validés en R&D avec les clients. Je travaille aussi sur le terrain : déploiements AMR sur site pour de grands groupes industriels en Europe, dont un site majeur exploitant une flotte de **25 AMR**, et déploiements AGV pour des clients en Afrique du Nord.",
-      "Ingénieur en génie industriel diplômé de l'ENIT (Bac+5, 2024), avec une spécialisation en recherche opérationnelle et en supply chain. Je travaille en français et en anglais avec des clients internationaux.",
+      "Ingénieur en génie industriel spécialisé en **optimisation et recherche opérationnelle**, appliquées aux flottes de robots mobiles autonomes (AMR/AGV). Mon point fort : traduire un problème opérationnel en modèle mathématique, puis en algorithme qui tient en production.",
+      "Solide maîtrise de **Python**, des heuristiques et métaheuristiques, de la modélisation MILP, de l'ordonnancement et de la simulation, avec de bonnes bases en machine learning et une expérience concrète de l'intégration d'algorithmes dans un Fleet Management System **C#/.NET**. Tout aussi à l'aise sur le terrain : mise en service sur site, coordination des parties prenantes et formation des opérateurs sur des projets internationaux, jusqu'à un site majeur exploitant une flotte de **25 AMR**.",
+      "Rigoureux, autonome et clair avec des interlocuteurs techniques comme non techniques. Français et anglais courants (C1), arabe langue maternelle. Diplômé de l'ENIT (Bac+5, 2024).",
     ],
   },
   experience: {
@@ -755,19 +742,6 @@ const fr: Content = {
         note: "Le playground ci-dessous exécute une version réduite du problème d'affectation dans votre navigateur.",
         stack: ['Python', 'Recherche opérationnelle', 'Heuristiques', 'Intégration C#/.NET'],
         featured: true,
-      },
-      {
-        id: 'local-rag',
-        title: 'Assistant documentaire RAG local',
-        pitch:
-          'Un chatbot 100 % local et sans coût sur des fichiers PDF, Word et PowerPoint, avec OCR.',
-        problem:
-          "Les documents techniques sont dispersés dans plusieurs formats, et les envoyer à une API cloud n'est ni gratuit ni toujours acceptable.",
-        approach:
-          'Recherche hybride (BM25 + recherche vectorielle) avec reranker, embeddings multilingues (BAAI/bge-m3) stockés dans ChromaDB et LLM local servi par Ollama (qwen3:8b). OCR pour les pages scannées et historique de conversation persistant.',
-        result:
-          'Fonctionne entièrement sur une machine locale, sans coût par requête. Reconstruit et amélioré sur quatre versions (v1 → v4).',
-        stack: ['Python', 'ChromaDB', 'Ollama', 'BAAI/bge-m3', 'BM25', 'Reranker', 'OCR'],
       },
       {
         id: 'ml-audit',
@@ -878,7 +852,6 @@ const fr: Content = {
           'TensorFlow / Keras',
           'Data mining',
           'Prévision',
-          'RAG : recherche hybride, embeddings, reranking',
         ],
       },
       {
@@ -921,8 +894,8 @@ const fr: Content = {
     languagesTitle: 'Langues',
     languages: [
       { name: 'Arabe', level: 'Langue maternelle' },
-      { name: 'Français', level: 'B2 · DELF' },
-      { name: 'Anglais', level: 'B2 · TOEIC' },
+      { name: 'Français', level: 'C1' },
+      { name: 'Anglais', level: 'C1' },
       { name: 'Espagnol', level: 'Débutant' },
     ],
   },
