@@ -1,0 +1,8 @@
+node_modules
+dist
+*.local
+.vercel
+.DS_Store
+
+# Source CV: contains private contact details and outdated wording. Never publish.
+cv/
