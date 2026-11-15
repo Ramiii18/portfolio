@@ -8,6 +8,7 @@ import { useLang } from '../lib/lang-context'
 const COMMANDS = [
   ...SECTION_IDS.map((id) => `goto ${id}`),
   'optimize',
+  'ask',
   'cv',
   'view classic',
   'view fleet',
@@ -19,7 +20,7 @@ const COMMANDS = [
 /** Terminal-style command palette (Ctrl/Cmd + K). */
 export default function CommandPalette({ onClose }: { onClose: () => void }) {
   const { t, setLang } = useLang()
-  const { navigate, setView, isDesktop } = useApp()
+  const { navigate, setView, isDesktop, openChat } = useApp()
   const routerNavigate = useNavigate()
   const [value, setValue] = useState('')
   const [log, setLog] = useState<string[]>([])
@@ -55,6 +56,9 @@ export default function CommandPalette({ onClose }: { onClose: () => void }) {
     } else if (name === 'optimize') {
       onClose()
       window.setTimeout(() => navigate('projects', { playground: true }), 0)
+    } else if (name === 'ask') {
+      onClose()
+      window.setTimeout(openChat, 0)
     } else if (name === 'cv') {
       onClose()
       routerNavigate('/cv')

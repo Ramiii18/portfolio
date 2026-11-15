@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
+import { lazy, Suspense, useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import { AnimatePresence } from 'framer-motion'
 import ClassicView from '../components/classic/ClassicView'
 import CommandPalette from '../components/CommandPalette'
@@ -8,6 +8,8 @@ import { AppContext, type AppValue, type FleetNavigate, type View } from '../lib
 import { DESKTOP, prefersReducedMotionNow, useMediaQuery } from '../lib/hooks'
 import { useLang } from '../lib/lang-context'
 import { readSession, writeSession } from '../lib/storage'
+
+const ChatBox = lazy(() => import('../components/ChatBox'))
 
 const VIEW_KEY = 'fleetos.view'
 const SEEN_KEY = 'seen'
@@ -57,6 +59,12 @@ export default function Home() {
 
   const openPalette = useCallback(() => setPaletteOpen(true), [])
   const closePalette = useCallback(() => setPaletteOpen(false), [])
+  const [chatOpen, setChatOpen] = useState(false)
+  const openChat = useCallback(() => setChatOpen(true), [])
+  const closeChat = useCallback(() => {
+    setChatOpen(false)
+    window.setTimeout(() => document.getElementById('chat-launcher')?.focus(), 0)
+  }, [])
 
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
@@ -70,8 +78,8 @@ export default function Home() {
   }, [])
 
   const app = useMemo<AppValue>(
-    () => ({ view, isDesktop, setView, navigate, openPalette, fleetNav }),
-    [view, isDesktop, setView, navigate, openPalette],
+    () => ({ view, isDesktop, setView, navigate, openPalette, openChat, fleetNav }),
+    [view, isDesktop, setView, navigate, openPalette, openChat],
   )
 
   return (
@@ -83,9 +91,25 @@ export default function Home() {
           type="button"
           onClick={openPalette}
           aria-label={t.hud.openPalette}
-          className="label fixed bottom-3 right-3 z-20 hidden min-h-[32px] border border-line bg-bg px-2 hover:text-path md:block"
+          className="label fixed bottom-3 left-3 z-20 hidden min-h-[32px] border border-line bg-bg px-2 hover:text-path md:block"
         >
           {t.hud.paletteHint}
+        </button>
+      )}
+
+      {chatOpen ? (
+        <Suspense fallback={null}>
+          <ChatBox onClose={closeChat} />
+        </Suspense>
+      ) : (
+        <button
+          id="chat-launcher"
+          type="button"
+          onClick={openChat}
+          className="fixed bottom-3 right-3 z-20 flex min-h-[40px] items-center gap-2 border border-safety bg-bg px-3 font-mono text-xs font-bold uppercase tracking-wider text-safety shadow-lg hover:bg-safety hover:text-bg"
+        >
+          <span aria-hidden="true">{'>_'}</span>
+          {t.chat.button}
         </button>
       )}
 

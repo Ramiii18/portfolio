@@ -203,6 +203,20 @@ export interface Content {
     languages: string
     certifications: string
   }
+  chat: {
+    button: string
+    title: string
+    intro: string
+    placeholder: string
+    send: string
+    close: string
+    suggestions: string[]
+    noAnswer: string
+    alsoRelevant: string
+    goTo: string
+    disclaimer: string
+    you: string
+  }
   footer: string
 }
 
@@ -597,6 +611,7 @@ const en: Content = {
       'view classic | view fleet',
       'cv — open the printable CV',
       'optimize — open the Optimizer Playground',
+      'ask — open the profile assistant',
       'help — show this list',
     ],
     unknown: 'Unknown command. Type "help" for the list.',
@@ -616,6 +631,28 @@ const en: Content = {
     skills: 'Skills',
     languages: 'Languages',
     certifications: 'Certifications',
+  },
+  chat: {
+    button: 'Ask about Rami',
+    title: 'Profile assistant',
+    intro:
+      'Ask a question about Rami: experience, skills, projects, education, languages or contact.',
+    placeholder: 'e.g. What does he do at ISITEC?',
+    send: 'Send',
+    close: 'Close assistant',
+    suggestions: [
+      'What does he do at ISITEC?',
+      'What are his optimization skills?',
+      'Which languages does he speak?',
+      'Where did he study?',
+      'How can I contact him?',
+    ],
+    noAnswer:
+      'I could not find that in the profile. I only answer from the information on this site: experience, projects, skills, education, languages and contact.',
+    alsoRelevant: 'Also relevant',
+    goTo: 'Open section',
+    disclaimer: 'Answers are retrieved from the profile on this site. Nothing you type leaves your browser.',
+    you: 'You',
   },
   footer: 'Designed and built as a fleet console. Paths computed with A*.',
 }
@@ -1004,6 +1041,7 @@ const fr: Content = {
       'view classic | view fleet',
       'cv — ouvrir le CV imprimable',
       "optimize — ouvrir l'Optimizer Playground",
+      "ask — ouvrir l'assistant profil",
       'help — afficher cette liste',
     ],
     unknown: 'Commande inconnue. Tapez « help » pour la liste.',
@@ -1023,6 +1061,29 @@ const fr: Content = {
     skills: 'Compétences',
     languages: 'Langues',
     certifications: 'Certifications',
+  },
+  chat: {
+    button: 'Une question sur Rami ?',
+    title: 'Assistant profil',
+    intro:
+      'Posez une question sur Rami : expérience, compétences, projets, formation, langues ou contact.',
+    placeholder: 'ex. Que fait-il chez ISITEC ?',
+    send: 'Envoyer',
+    close: "Fermer l'assistant",
+    suggestions: [
+      'Que fait-il chez ISITEC ?',
+      'Quelles sont ses compétences en optimisation ?',
+      'Quelles langues parle-t-il ?',
+      'Où a-t-il étudié ?',
+      'Comment le contacter ?',
+    ],
+    noAnswer:
+      "Je n'ai pas trouvé cette information dans le profil. Je réponds uniquement à partir du contenu de ce site : expérience, projets, compétences, formation, langues et contact.",
+    alsoRelevant: 'À voir aussi',
+    goTo: 'Ouvrir la section',
+    disclaimer:
+      'Les réponses sont extraites du profil présenté sur ce site. Rien de ce que vous saisissez ne quitte votre navigateur.',
+    you: 'Vous',
   },
   footer: 'Conçu et développé comme une console de flotte. Trajets calculés avec A*.',
 }

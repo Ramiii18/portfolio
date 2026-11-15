@@ -18,6 +18,7 @@ export interface AppValue {
   /** Go to a section: drives the robot in fleet view, scrolls in classic view. */
   navigate: FleetNavigate
   openPalette: () => void
+  openChat: () => void
   /** Fleet view registers its robot navigation here. */
   fleetNav: MutableRefObject<FleetNavigate | null>
 }

@@ -308,7 +308,8 @@ export default function FleetView() {
           onStation={goTo}
         />
 
-        <div className="mx-auto mt-2 flex w-full max-w-[1600px] flex-wrap items-center justify-between gap-x-6 gap-y-1">
+        {/* right padding keeps the hints clear of the floating assistant button */}
+        <div className="mx-auto mt-2 flex w-full max-w-[1600px] flex-wrap items-center gap-x-6 gap-y-1 pr-56">
           <p className="label">
             <span className="text-text">{t.meta.name}</span> · {t.meta.role} · {t.hud.mapHint}
           </p>
